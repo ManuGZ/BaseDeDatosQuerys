@@ -1,0 +1,791 @@
+--CREACION DE USUARIOS
+--1
+EXEC USPRegistroUusarios 
+	@Nombre  = 'Felipe', 
+	@Contrasenia = '5VfVKOB15b',
+	@Apellidos = 'Galindo Balaguer', 
+	@Correo = 'felgal26@gmail.com', 
+	@Telefono = '967668064',
+	@Fecha_nacimiento = '1990-01-26'
+GO
+
+--2
+EXEC USPRegistroUusarios 
+	@Nombre  = 'Emilio', 
+	@Contrasenia = 'S8Hn2v59Bi',
+	@Apellidos = 'Canovas Izquierdo', 
+	@Correo = 'emiizq27@gmail.com', 
+	@Telefono = '911027122',
+	@Fecha_nacimiento = '1996-06-27'
+GO
+
+--3
+EXEC USPRegistroUusarios 
+	@Nombre  = 'Naima', 
+	@Contrasenia = 'fH3cm130Lh',
+	@Apellidos = 'Acevedo Benavente', 
+	@Correo = 'naiace21@gmail.com', 
+	@Telefono = '929049625',
+	@Fecha_nacimiento = '1990-08-21'
+GO
+
+--4
+EXEC USPRegistroUusarios 
+	@Nombre  = 'Cintia', 
+	@Contrasenia = '7x6Ugc1LZc',
+	@Apellidos = 'Ramón Valle', 
+	@Correo = 'cinram@gmail.com', 
+	@Telefono = '931953301',
+	@Fecha_nacimiento = '1978-06-23'
+GO
+
+--5
+EXEC USPRegistroUusarios 
+	@Nombre  = 'Natalia', 
+	@Contrasenia = 'r2V5LFltX9',
+	@Apellidos = 'Tello Gonzales', 
+	@Correo = 'nattel04@gmail.com', 
+	@Telefono = '966515154',
+	@Fecha_nacimiento = '1997/06/04'
+GO
+
+--6
+EXEC USPRegistroUusarios 
+	@Nombre  = 'Victoria', 
+	@Contrasenia = 'FE6Z6XYc2s',
+	@Apellidos = 'Ávila LLamas', 
+	@Correo = 'vicavi18@gmail.com', 
+	@Telefono = '951892677',
+	@Fecha_nacimiento = '1987/12/18'
+GO
+
+--7
+EXEC USPRegistroUusarios 
+	@Nombre  = 'Hugo', 
+	@Contrasenia = 'xlTwS0995f',
+	@Apellidos = 'Velasco Cornejo', 
+	@Correo = 'hugvel04@gmail.com', 
+	@Telefono = '970591183',
+	@Fecha_nacimiento = '1993/01/04'
+GO
+
+--8
+EXEC USPRegistroUusarios 
+	@Nombre  = 'Franco', 
+	@Contrasenia = 'mOih803kZm',
+	@Apellidos = 'Palomino Trejo', 
+	@Correo = 'frapal29@gmail.com', 
+	@Telefono = '988791761',
+	@Fecha_nacimiento = '2002/12/29'
+GO
+
+--9
+EXEC USPRegistroUusarios 
+	@Nombre  = 'Diego', 
+	@Contrasenia = '24Ny6WjVVB',
+	@Apellidos = 'Cortez Villa', 
+	@Correo = 'diecor21@gmail.com', 
+	@Telefono = '921722961',
+	@Fecha_nacimiento = '1992/09/21'
+GO
+
+--10
+EXEC USPRegistroUusarios 
+	@Nombre  = 'Nicole', 
+	@Contrasenia = 'ux299qAZv4',
+	@Apellidos = 'Valenzuela Pérez', 
+	@Correo = 'nicval11@gmail.com', 
+	@Telefono = '936152655',
+	@Fecha_nacimiento = '1997/02/11'
+GO
+
+
+
+--CREACION DE ORGANIZADORES
+--1
+EXEC USPRegistroOrganizadores
+	@Nombre  = 'StormMusic', 
+	@Contrasenia = 'Strone432%',
+	@Correo = 'stormmusic1988@gmail.com', 
+	@Telefono = '965432189'
+GO
+
+--2
+EXEC USPRegistroOrganizadores
+	@Nombre  = 'JuanpoProducciones', 
+	@Contrasenia = 'Hfrok1883',
+	@Correo = 'jjproductions@gmial.com ', 
+	@Telefono = '934567890'
+GO
+
+--3
+EXEC USPRegistroOrganizadores
+	@Nombre  = 'Marieventos', 
+	@Contrasenia = 'pohfdss54',
+	@Correo = 'mari.eventos1@gmail.com ', 
+	@Telefono = '978123456'
+GO
+
+--4
+EXEC USPRegistroOrganizadores
+	@Nombre  = 'EventosPro', 
+	@Contrasenia = 'hftiv12',
+	@Correo = 'eventospro32@gmail.com', 
+	@Telefono = '923456789'
+GO
+
+--5
+EXEC USPRegistroOrganizadores
+	@Nombre  = 'PlanificaFest', 
+	@Contrasenia = 'fgvcgrb#',
+	@Correo = 'planifica.fest1992@gmail.com', 
+	@Telefono = '943217865'
+GO
+
+--6
+EXEC USPRegistroOrganizadores
+	@Nombre  = 'LauShows', 
+	@Contrasenia = 'puojddj#',
+	@Correo = 'laushows28@gmail.com', 
+	@Telefono = '912345678'
+GO
+
+--7
+EXEC USPRegistroOrganizadores
+	@Nombre  = 'DreamMakers', 
+	@Contrasenia = 'fniedpt',
+	@Correo = 'dream.events@gmail.com ', 
+	@Telefono = '956781234'
+GO
+
+--8
+EXEC USPRegistroOrganizadores
+	@Nombre  = 'SofiaTorresShows', 
+	@Contrasenia = 'Sosrkof',
+	@Correo = 'sofitorres.shows2705@gmial.com', 
+	@Telefono = '987654321'
+GO
+
+--9
+EXEC USPRegistroOrganizadores
+	@Nombre  = 'PlanItPerfect', 
+	@Contrasenia = 'Sayoifn88',
+	@Correo = 'planitperfect.events22@gmail.com', 
+	@Telefono = '942718365'
+GO
+
+--10
+EXEC USPRegistroOrganizadores
+	@Nombre  = 'BeyondImaginationEvents', 
+	@Contrasenia = 'bbrreti_33',
+	@Correo = 'beyond.imagination3@gmail.com', 
+	@Telefono = '968574321'
+GO
+
+
+
+
+--CREACION DE UBICACIONES
+--1
+EXEC USPRegistroUbicaciones 
+	@Distrito = 'Pueblo Libre',
+	@Ciudad = 'Lima' ,
+	@Direccion = 'Jr. Cartagena 121',
+	@Referencia = 'Altura del cruce de la Av. La Marina con la Av. Brasil'
+GO
+
+--2
+EXEC USPRegistroUbicaciones 
+	@Distrito = 'El Cercado',
+	@Ciudad = 'Lima' ,
+	@Direccion = 'Julio Rodavero 682 Urb. Las Brisas',
+	@Referencia = 'Media cdra. del colegio Encinas'
+GO
+
+--3
+EXEC USPRegistroUbicaciones 
+	@Distrito = 'Santiago De Surco',
+	@Ciudad = 'Lima' ,
+	@Direccion = 'Avenida Manuel Olguin, 561',
+	@Referencia = 'Al frente del IPD cdra. 6'
+GO
+
+--4
+EXEC USPRegistroUbicaciones 
+	@Distrito = 'Miraflores',
+	@Ciudad = 'Lima' ,
+	@Direccion = 'Avenida Ignacio Merino, 636',
+	@Referencia = 'A dos cdra. del cruce entre la Av. Angamos con Av. Petit Thouars.'
+GO
+
+--5
+EXEC USPRegistroUbicaciones 
+	@Distrito = 'San Isidro',
+	@Ciudad = 'Lima' ,
+	@Direccion = 'Avenida Dos De Mayo, 621',
+	@Referencia = 'A la espalda del banco Interbank'
+GO
+
+--6
+EXEC USPRegistroUbicaciones 
+	@Distrito = 'Santiago De Surco',
+	@Ciudad = 'Lima' ,
+	@Direccion = 'Conde De Nieva, 243',
+	@Referencia = 'Altura crda. 12 Av. Primavera'
+GO
+
+--7
+EXEC USPRegistroUbicaciones 
+	@Distrito = 'La Victoria',
+	@Ciudad = 'Lima' ,
+	@Direccion = 'Avenida República De Panamá, 2577',
+	@Referencia = 'Cdra. 10 Av. Iquitos Cruce con Jr. Canta'
+GO
+
+--8
+EXEC USPRegistroUbicaciones 
+	@Distrito = 'Surquillo',
+	@Ciudad = 'Lima' ,
+	@Direccion = 'Calle Octavio Paz, 255',
+	@Referencia = 'A media cuadra de la Via Expresa'
+GO
+
+--9
+EXEC USPRegistroUbicaciones 
+	@Distrito = 'San Juan De Lurigancho',
+	@Ciudad = 'Lima' ,
+	@Direccion = 'Calle Lass, 217',
+	@Referencia = 'Alt. paradero 10 Av. Canto Grande'
+GO
+
+--10
+EXEC USPRegistroUbicaciones 
+	@Distrito = 'San Isidro',
+	@Ciudad = 'Lima' ,
+	@Direccion = 'Avenida Camino Real, 485, Tda. 11',
+	@Referencia = 'A media cuadra del BBVA'
+GO
+
+
+--CREACION DE CATEGORIAS
+--1
+EXEC USPRegistroCategorias
+	@Nombre = 'Deporte',
+	@Descripcion = 'Disfruta de los mejores deportes'
+GO
+--2
+EXEC USPRegistroCategorias
+	@Nombre = 'Educación',
+	@Descripcion = 'Aprende mientras te diviertes'
+GO
+--3
+EXEC USPRegistroCategorias
+	@Nombre = 'Música',
+	@Descripcion = 'Vive la musica de la mejor manera'
+GO
+--4
+EXEC USPRegistroCategorias
+	@Nombre = 'Arte',
+	@Descripcion = 'Para amantes del arte moderno'
+GO
+--5
+EXEC USPRegistroCategorias
+	@Nombre = 'Gastronomía',
+	@Descripcion = 'Conoce y prueba la gastronomia peruana'
+GO
+--6
+EXEC USPRegistroCategorias
+	@Nombre = 'Caridad',
+	@Descripcion = 'Oportunidad para apoyar a los que mas lo necesitan'
+GO
+--7
+EXEC USPRegistroCategorias
+	@Nombre = 'Tecnología',
+	@Descripcion = 'Para amantes de la tecnologia e informatica'
+GO
+--8
+EXEC USPRegistroCategorias
+	@Nombre = 'Videojuegos',
+	@Descripcion = 'Exclusivo para gamers'
+GO
+--9
+EXEC USPRegistroCategorias
+	@Nombre = 'Negocios',
+	@Descripcion = 'Para los que quieren hacer crecer su negocio'
+GO
+--10
+EXEC USPRegistroCategorias
+	@Nombre = 'Terror',
+	@Descripcion = 'Vive las experiencias mas escalofriantes'
+GO
+
+--CREACION DE EVENTOS
+--1
+EXEC USPRegistroEventos
+	@Codigo_organizadores = '1',
+	@Codigo_ubicaciones = '3',
+	@Nombre = 'Celebración a la marinera',
+	@Fecha = '2023-12-01',
+	@Hora = '16:00',
+	@Descripcion = 'Únete a la celebración de uno de los bailes más representativos del país, la marinera. Este evento cultural tendrá actividades interactivas entre todos los participantes como concurso de baile, aprendizaje de su historia, vestimenta y la diferencia que hay entre cada tipo de marinera',
+	@Entradas = 32
+GO
+--2
+EXEC USPRegistroEventos
+	@Codigo_organizadores = '2',
+	@Codigo_ubicaciones = '5',
+	@Nombre = 'Exposición de textiles prehispánicos',
+	@Fecha = '2024-05-14',
+	@Hora = '20:00',
+	@Descripcion = 'Esta exposición sobre los textiles prehispánicos espera que se pueda brindar un mejor guía sobre el rol que cumplían antes de la Conquista Española. Con ayuda del Ministerio de Cultura, este evento tendrá disponible más de 100 ejemplares en buen estado',
+	@Entradas = 50
+GO
+--3
+EXEC USPRegistroEventos
+	@Codigo_organizadores = '2',
+	@Codigo_ubicaciones = '7',
+	@Nombre = 'Recorrido: Gastronomía Peruana',
+	@Fecha = '2023-11-30',
+	@Hora = '10:00',
+	@Descripcion = 'Deléitate con los sabores auténticos de la comida peruana en una mañana llena de platos deliciosos y representativos del país. Contamos con más de 50 stands de comida para que se sienta la inmensa diversidad de nuestra gastronomía',
+	@Entradas = 15
+GO
+--4
+EXEC USPRegistroEventos
+	@Codigo_organizadores = '5',
+	@Codigo_ubicaciones = '8',
+	@Nombre = 'Taller de Cerámica Moche',
+	@Fecha = '2024-06-04',
+	@Hora = '13:00',
+	@Descripcion = 'Aventúrate a aprender las técnicas antiguas de cerámica de la reconocida cultura Moche en un taller interactivo que te conectará con la historia de nuestro país',
+	@Entradas = 23
+GO
+--5
+EXEC USPRegistroEventos
+	@Codigo_organizadores = '8',
+	@Codigo_ubicaciones = '10',
+	@Nombre = 'Narración de libros peruanos',
+	@Fecha = '2023-11-25',
+	@Hora = '15:30',
+	@Descripcion = 'Adéntrate a este maravilloso mundo que es la literatura peruana con las diversas narraciones de libros ampliamente reconocidos del país. Desde Clorinda Matto de Turner, Julio Ramón Ribeyro, Ciro Alegría, entre otros. Además, se dará una breve explicación del significado de cada libro',
+	@Entradas = 20
+GO
+--6
+EXEC USPRegistroEventos
+	@Codigo_organizadores = '9',
+	@Codigo_ubicaciones = '10',
+	@Nombre = 'Exhibición: Orquídeas Peruanas',
+	@Fecha = '2023-12-06',
+	@Hora = '14:00',
+	@Descripcion = 'Admira una impresionante colección de orquídeas nativas de Perú en esta exposición llena de colores y vida. Desde la explicación de qué significa cada color hasta cuál es tu tiempo de florecimiento con sus respectivos cuidados; todo estará debidamente guiado por expertos',
+	@Entradas = 10
+GO
+--7
+EXEC USPRegistroEventos
+	@Codigo_organizadores = '5',
+	@Codigo_ubicaciones = '4',
+	@Nombre = 'Tardes de leyendas peruanas',
+	@Fecha = '2023-10-30',
+	@Hora = '18:00',
+	@Descripcion = 'Explora este desconocido mundo para muchos, las leyendas que representan a nuestro país y su historia. Desde la leyenda del Ayaymama hasta la de los Hermanos Ayar. Descubre cómo han influenciado en cada uno de nosotros y su debido contexto histórico para aprender un poco más del Perú',
+	@Entradas = 5
+GO
+--8
+EXEC USPRegistroEventos
+	@Codigo_organizadores = '4',
+	@Codigo_ubicaciones = '2',
+	@Nombre = 'Viva Folclore',
+	@Fecha = '2023-11-28',
+	@Hora = '21:00',
+	@Descripcion = 'Disfruta uno de los conciertos más relevantes de Lima, Viva Folclore. Este concierto contará con distintos artistas representantes del folclore peruano, brindando una experiencia inolvidable con los distintivos instrumentos y letras con los cuales se identifica nuestra cultura',
+	@Entradas = 75
+GO
+--9
+EXEC USPRegistroEventos
+	@Codigo_organizadores = '1',
+	@Codigo_ubicaciones = '1',
+	@Nombre = 'Cantos angelicales',
+	@Fecha = '2023-11-14',
+	@Hora = '17:00',
+	@Descripcion = 'Sumérgete en un mundo celestial de armonía y emoción en "Cantos Angelicales", un evento cultural que te transportará a través de melodías divinas y voces celestiales en una experiencia única e inolvidable',
+	@Entradas = 
+--10
+EXEC USPRegistroEventos
+	@Codigo_organizadores = '6',
+	@Codigo_ubicaciones = '1',
+	@Nombre = 'Noche Criolla',
+	@Fecha = '2023-12-06',
+	@Hora = '20:00',
+	@Descripcion = 'Disfruta de una llena de música, comida y bailes criollos peruanos en nuestro evento especial. Trae a toda tu familia a esta bella conmemoración a una parte de nuestra historia',
+	@Entradas = 80
+GO
+
+--CREACION DE CATEGORIAS_EVENTOS
+--1
+EXEC USPRegistroCategoriasEventos
+	@Codigo_categorias = '4',
+	@Codigo_eventos = '1'
+GO
+--2
+EXEC USPRegistroCategoriasEventos
+	@Codigo_categorias = '4',
+	@Codigo_eventos = '2'
+GO
+--3
+EXEC USPRegistroCategoriasEventos
+	@Codigo_categorias = '5',
+	@Codigo_eventos = '3'
+GO
+--4
+EXEC USPRegistroCategoriasEventos
+	@Codigo_categorias = '4',
+	@Codigo_eventos = '4'
+GO
+--5
+EXEC USPRegistroCategoriasEventos
+	@Codigo_categorias = '2',
+	@Codigo_eventos = '5'
+GO
+--6
+EXEC USPRegistroCategoriasEventos
+	@Codigo_categorias = '4',
+	@Codigo_eventos = '6'
+GO
+--7
+EXEC USPRegistroCategoriasEventos
+	@Codigo_categorias = '4',
+	@Codigo_eventos = '7'
+GO
+--8
+EXEC USPRegistroCategoriasEventos
+	@Codigo_categorias = '4',
+	@Codigo_eventos = '8'
+GO
+--9
+EXEC USPRegistroCategoriasEventos
+	@Codigo_categorias = '4',
+	@Codigo_eventos = '9'
+GO
+--10
+EXEC USPRegistroCategoriasEventos
+	@Codigo_categorias = '4',
+	@Codigo_eventos = '10'
+GO
+
+
+--CREACION DE COMPRAS
+--1
+EXEC USPRegistroCompras
+	@Codigo_usuarios = '2',
+	@Codigo_entradas = '4',
+	@Metodo_pago = 'Tarjeta de crédito',
+	@Cantidad = '3',
+	@Fecha = '2023-05-04'
+GO
+--2
+EXEC USPRegistroCompras
+	@Codigo_usuarios = '5',
+	@Codigo_entradas = '1',
+	@Metodo_pago = 'Tarjeta de crédito',
+	@Cantidad = '2',
+	@Fecha = '2023-11-07'
+
+GO
+--3
+EXEC USPRegistroCompras
+	@Codigo_usuarios = '6',
+	@Codigo_entradas = '8',
+	@Metodo_pago = 'Yape',
+	@Cantidad = '3',
+	@Fecha = '2023-05-25'
+GO
+--4
+EXEC USPRegistroCompras
+	@Codigo_usuarios = '7',
+	@Codigo_entradas = '4',
+	@Metodo_pago = 'Plin',
+	@Cantidad = '1',
+	@Fecha = '2023-04-29'
+GO
+--5
+EXEC USPRegistroCompras
+	@Codigo_usuarios = '8',
+	@Codigo_entradas = '9',
+	@Metodo_pago = 'Plin',
+	@Cantidad = '5',
+	@Fecha = '2023-07-05'
+GO
+--6
+EXEC USPRegistroCompras
+	@Codigo_usuarios = '9',
+	@Codigo_entradas = '6',
+	@Metodo_pago = 'Yape',
+	@Cantidad = '2',
+	@Fecha = '2023-06-09'
+GO
+--7
+EXEC USPRegistroCompras
+	@Codigo_usuarios = '10',
+	@Codigo_entradas = '5',
+	@Metodo_pago = 'Yape',
+	@Cantidad = '3',
+	@Fecha = '2024-01-10'
+GO
+--8
+EXEC USPRegistroCompras
+	@Codigo_usuarios = '1',
+	@Codigo_entradas = '10',
+	@Metodo_pago = 'Tarjeta de crédito',
+	@Cantidad = '4',
+	@Fecha = '2023-02-01'
+GO
+--9
+EXEC USPRegistroCompras
+	@Codigo_usuarios = '2',
+	@Codigo_entradas = '7',
+	@Metodo_pago = 'Tarjeta de crédito',
+	@Cantidad = '2',
+	@Fecha = '2023-05-04'
+GO
+--10
+EXEC USPRegistroCompras
+	@Codigo_usuarios = '3',
+	@Codigo_entradas = '2',
+	@Metodo_pago = 'Plin',
+	@Cantidad = '1',
+	@Fecha = '2023-11-30'
+GO
+
+
+--CREACION DE ENTRADAS
+--1
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '1',
+	@Precio = '42.50'
+GO
+--2
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '4',
+	@Precio = '38.25'
+GO
+--3
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '3',
+	@Precio = '82.30'
+GO
+--4
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '6',
+	@Precio = '40.25'
+GO
+--5
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '2',
+	@Precio = '32.80'
+GO
+--6
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '5',
+	@Precio = '59.90'
+GO
+--7
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '10',
+	@Precio = '23.30'
+GO
+--8
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '7',
+	@Precio = '55.20'
+GO
+--9
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '9',
+	@Precio = '26.80'
+GO
+--10
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '8',
+	@Precio = '48.90'
+GO
+
+
+--CREACION DE RESENIAS
+--1
+EXEC USPRegistroResenias
+	@Calificacion = '4',
+	@Comentario = 'La "Celebración a la Marinera" fue una experiencia cultural vibrante. La participación activa en el concurso de baile y el aprendizaje de la historia y vestimenta agregaron un toque único. Aunque podría profundizar más en la historia, es un evento recomendado para aquellos que buscan sumergirse en la tradición de la marinera.',
+	@Codigo_compras_usuarios = '2',
+	@Codigo_compras_entradas = '4'
+GO
+
+--2
+EXEC USPRegistroResenias
+	@Calificacion = '4',
+	@Comentario = 'La "Exposición de Textiles Prehispánicos" fue una experiencia reveladora. Los más de 100 ejemplares en excelente estado respaldados por el Ministerio de Cultura ofrecieron una visión auténtica del pasado. Aunque me hubiera encantado una interacción más directa con las piezas, la exhibición fue educativa y visualmente impresionante, sumergiéndome en la rica historia de los textiles prehispánicos.',
+	@Codigo_compras_usuarios = '5',
+	@Codigo_compras_entradas = '1'
+GO
+
+--3
+EXEC USPRegistroResenias
+	@Calificacion = '5',
+	@Comentario = 'El "Recorrido: Gastronomía Peruana" fue una experiencia culinaria excepcional con más de 50 stands que ofrecían una auténtica y diversa muestra de la comida peruana. Cada bocado era una deliciosa aventura que celebraba la riqueza gastronómica del país. Altamente recomendado para los amantes de la buena comida y la cultura culinaria.',
+	@Codigo_compras_usuarios = '6',
+	@Codigo_compras_entradas = '8'
+GO
+
+--4
+EXEC USPRegistroResenias
+	@Calificacion = '4',
+	@Comentario = 'El "Taller de Cerámica Moche" fue una experiencia única para sumergirse en las técnicas ancestrales. Aunque desearía más tiempo práctico, la conexión con la historia del país fue fascinante. Recomendado para quienes buscan una experiencia educativa y práctica.',
+	@Codigo_compras_usuarios = '7',
+	@Codigo_compras_entradas = '4'
+GO
+
+--5
+EXEC USPRegistroResenias
+	@Calificacion = '4',
+	@Comentario = 'La "Narración de Libros Peruanos" fue una experiencia encantadora, sumergiéndonos en la literatura de Clorinda Matto de Turner, Julio Ramón Ribeyro y otros destacados autores peruanos. Las explicaciones breves añadieron profundidad, aunque desearía más tiempo para discutir cada obra. En general, un evento enriquecedor que celebra la riqueza literaria del país y perfecto para los amantes de la lectura y la cultura.',
+	@Codigo_compras_usuarios = '8',
+	@Codigo_compras_entradas = '9'
+GO
+
+--6
+EXEC USPRegistroResenias
+	@Calificacion = '5',
+	@Comentario = 'La "Exhibición: Orquídeas Peruanas" fue simplemente espectacular. La diversidad de colores y vida en las orquídeas nativas fue impresionante. Los expertos guiaron de manera detallada, explicando el significado de cada color y proporcionando valiosa información sobre el tiempo de floración y cuidados. Un evento imperdible para amantes de la naturaleza y la belleza floral.',
+	@Codigo_compras_usuarios = '9',
+	@Codigo_compras_entradas = '6'
+GO
+
+--7
+EXEC USPRegistroResenias
+	@Calificacion = '3',
+	@Comentario = 'La "Exhibición: Tardes de Leyendas Peruanas" ofreció un vistazo intrigante al mundo de las leyendas del país. Aunque la exploración de historias como la del Ayaymama y los Hermanos Ayar fue interesante, la presentación podría mejorar para hacerlas más envolventes. Sin embargo, fue una oportunidad única para aprender sobre las influencias históricas de estas leyendas en la cultura peruana.',
+	@Codigo_compras_usuarios = '10',
+	@Codigo_compras_entradas = '5'
+GO
+
+--8
+EXEC USPRegistroResenias
+	@Calificacion = '3',
+	@Comentario = '"Exhibición: Viva Folclore" fue un concierto interesante con representantes del folclore peruano. Aunque los artistas ofrecieron una experiencia auténtica, la calidad del sonido y la organización del evento podrían mejorarse. Sin embargo, la variedad de instrumentos y letras resaltó la riqueza cultural, haciendo que la experiencia fuera enriquecedora para quienes buscan sumergirse en la música folclórica peruana.',
+	@Codigo_compras_usuarios = '1',
+	@Codigo_compras_entradas = '10'
+GO
+
+--9
+EXEC USPRegistroResenias
+	@Calificacion = '4',
+	@Comentario = '"Exhibición: Noche Criolla" fue una experiencia encantadora, llena de música, comida y bailes criollos peruanos. Ideal para disfrutar en familia, la conmemoración histórica agregó un toque especial. Aunque algunos aspectos organizativos podrían mejorarse, la atmósfera festiva y la celebración de la cultura criolla crearon una noche memorable para todos.',
+	@Codigo_compras_usuarios = '2',
+	@Codigo_compras_entradas = '7'
+GO
+
+--10
+EXEC USPRegistroResenias
+	@Calificacion = '3',
+	@Comentario = 'La "Exhibición: Cantos Angelicales" proporcionó un viaje aceptable a través de melodías divinas y voces celestiales. Aunque la experiencia fue en su mayoría agradable, algunos aspectos en la coordinación y la diversidad de repertorio podrían mejorarse para ofrecer una experiencia más completa. Aún así, es una opción interesante para quienes buscan sumergirse en un mundo celestial de armonía.',
+	@Codigo_compras_usuarios = '3',
+	@Codigo_compras_entradas = '2'
+GO
+
+--CREACION DE TIPOS_SUSCRIPCIONES
+--1
+EXEC USPRegistroTiposSuscripciones
+	@Descripcion = 'Suscripción gratuita sin beneficios',
+	@Descuento = '0.00',
+	@Nombre = 'Clasica'
+GO
+--2
+EXEC USPRegistroTiposSuscripciones
+	@Descripcion = 'Suscripción premium de rango bajo que permite acceder a los eventos con anticipación',
+	@Descuento = '0.10',
+	@Nombre = 'Plata'
+GO
+--3
+EXEC USPRegistroTiposSuscripciones
+	@Descripcion = 'Suscripción premium de rango medio que permite acceder a los eventos con anticipación y desbloquear promociones',
+	@Descuento = '0.20',
+	@Nombre = 'Oro'
+GO
+--4
+EXEC USPRegistroTiposSuscripciones
+	@Descripcion = 'Suscripción premium de rango alto que permite acceder a los eventos con anticipación y desbloquear promociones y tener beneficios VIP',
+	@Descuento = '0.30',
+	@Nombre = 'Black'
+GO
+
+
+--CREACION DE SUSCRIPCIONES
+--1
+EXEC USPRegistroSuscripciones
+	@Codigo_usuario = '7',
+	@Codigo_tipo_suscripcion = '004',
+	@Fecha_inicio = ' 2017-03-15 00:03',
+	@Fecha_fin = '2021-03-14 00:03'
+GO
+--2
+EXEC USPRegistroSuscripciones
+	@Codigo_usuario = '9',
+	@Codigo_tipo_suscripcion = '002',
+	@Fecha_inicio = '2021-06-20 09:01',
+	@Fecha_fin = '2023-06-19 09:01'
+GO
+--3
+EXEC USPRegistroSuscripciones
+	@Codigo_usuario = '5',
+	@Codigo_tipo_suscripcion = '003',
+	@Fecha_inicio = '2020-09-10 10:07',
+	@Fecha_fin = '2022-04-09 10:07'
+GO
+--4
+EXEC USPRegistroSuscripciones
+	@Codigo_usuario = '8',
+	@Codigo_tipo_suscripcion = '003',
+	@Fecha_inicio = '2019-12-05 10:15',
+	@Fecha_fin = '2021-10-04 10:15'
+GO
+--5
+EXEC USPRegistroSuscripciones
+	@Codigo_usuario = '10',
+	@Codigo_tipo_suscripcion = '001',
+	@Fecha_inicio = '2019-10-07 16:36',
+	@Fecha_fin = '2023-10-06 16:36'
+GO
+--6
+EXEC USPRegistroSuscripciones
+	@Codigo_usuario = '6',
+	@Codigo_tipo_suscripcion = '004',
+	@Fecha_inicio = ' 2020-02-19 19:43:41',
+	@Fecha_fin = '2023-02-18 19:43:41'
+GO
+--7
+EXEC USPRegistroSuscripciones
+	@Codigo_usuario = '2',
+	@Codigo_tipo_suscripcion = '003',
+	@Fecha_inicio = '2018-08-23 21:01',
+	@Fecha_fin = '2020-10-22 21:01'
+GO
+--8
+EXEC USPRegistroSuscripciones
+	@Codigo_usuario = '4',
+	@Codigo_tipo_suscripcion = '003',
+	@Fecha_inicio = '2017-07-14 21:21:04',
+	@Fecha_fin = '2019-07-13 21:21:04'
+GO
+--9
+EXEC USPRegistroSuscripciones
+	@Codigo_usuario = '1',
+	@Codigo_tipo_suscripcion = '002',
+	@Fecha_inicio = '2016-11-28 21:30:54',
+	@Fecha_fin = '2018-06-27 21:30:54'
+GO
+--10
+EXEC USPRegistroSuscripciones
+	@Codigo_usuario = '3',
+	@Codigo_tipo_suscripcion = '001',
+	@Fecha_inicio = '2018-05-09 13:20:14',
+	@Fecha_fin = '2021-03-08 13:20:14'
+GO
