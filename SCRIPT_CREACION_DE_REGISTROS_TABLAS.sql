@@ -408,7 +408,7 @@ EXEC USPRegistroEventos
 	@Fecha = '2023-11-14',
 	@Hora = '17:00',
 	@Descripcion = 'Sumérgete en un mundo celestial de armonía y emoción en "Cantos Angelicales", un evento cultural que te transportará a través de melodías divinas y voces celestiales en una experiencia única e inolvidable',
-	@Entradas = 
+	@Entradas = 70
 --10
 EXEC USPRegistroEventos
 	@Codigo_organizadores = '6',
@@ -470,6 +470,60 @@ GO
 EXEC USPRegistroCategoriasEventos
 	@Codigo_categorias = '4',
 	@Codigo_eventos = '10'
+GO
+
+
+
+--CREACION DE ENTRADAS
+--1
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '1',
+	@Precio = '42.50'
+GO
+--2
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '4',
+	@Precio = '38.25'
+GO
+--3
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '3',
+	@Precio = '82.30'
+GO
+--4
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '6',
+	@Precio = '40.25'
+GO
+--5
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '2',
+	@Precio = '32.80'
+GO
+--6
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '5',
+	@Precio = '59.90'
+GO
+--7
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '10',
+	@Precio = '23.30'
+GO
+--8
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '7',
+	@Precio = '55.20'
+GO
+--9
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '9',
+	@Precio = '26.80'
+GO
+--10
+EXEC USPRegistroEntradas
+	@Codigo_eventos = '8',
+	@Precio = '48.90'
 GO
 
 
@@ -557,57 +611,7 @@ EXEC USPRegistroCompras
 GO
 
 
---CREACION DE ENTRADAS
---1
-EXEC USPRegistroEntradas
-	@Codigo_eventos = '1',
-	@Precio = '42.50'
-GO
---2
-EXEC USPRegistroEntradas
-	@Codigo_eventos = '4',
-	@Precio = '38.25'
-GO
---3
-EXEC USPRegistroEntradas
-	@Codigo_eventos = '3',
-	@Precio = '82.30'
-GO
---4
-EXEC USPRegistroEntradas
-	@Codigo_eventos = '6',
-	@Precio = '40.25'
-GO
---5
-EXEC USPRegistroEntradas
-	@Codigo_eventos = '2',
-	@Precio = '32.80'
-GO
---6
-EXEC USPRegistroEntradas
-	@Codigo_eventos = '5',
-	@Precio = '59.90'
-GO
---7
-EXEC USPRegistroEntradas
-	@Codigo_eventos = '10',
-	@Precio = '23.30'
-GO
---8
-EXEC USPRegistroEntradas
-	@Codigo_eventos = '7',
-	@Precio = '55.20'
-GO
---9
-EXEC USPRegistroEntradas
-	@Codigo_eventos = '9',
-	@Precio = '26.80'
-GO
---10
-EXEC USPRegistroEntradas
-	@Codigo_eventos = '8',
-	@Precio = '48.90'
-GO
+
 
 
 --CREACION DE RESENIAS
