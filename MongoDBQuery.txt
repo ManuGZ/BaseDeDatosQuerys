@@ -1,0 +1,864 @@
+db.createCollection("eventos", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["codigo_organizador", "ubicacion", "detalles_evento", "categorias", "resenias"],
+      properties: {
+        codigo_organizador: {
+          bsonType: "int",
+        },
+        ubicacion: {
+          bsonType: "object",
+          required: ["distrito", "ciudad", "direccion"],
+          properties: {
+            distrito: {
+              bsonType: "string",
+            },
+            ciudad: {
+              bsonType: "string",
+            },
+            direccion: {
+              bsonType: "string",
+            }
+          }
+        },
+        detalles_evento: {
+          bsonType: "object",
+          required: ["nombre", "fecha", "hora", "descripcion", "entradas"],
+          properties: {
+            nombre: {
+              bsonType: "string",
+            },
+            fecha: {
+              bsonType: "date",
+            },
+            hora: {
+              bsonType: "string",
+            },
+            descripcion: {
+              bsonType: "string",
+            },
+            entradas: {
+              bsonType: "int",
+            }
+          }
+        },
+        categorias: {
+          bsonType: "object",
+          required: ["nombre", "descripcion"],
+          properties: {
+            nombre: {
+              bsonType: "string",
+            },
+            descripcion: {
+              bsonType: "string",
+            }
+          }
+        },
+        resenias: {
+          bsonType: "array",
+          required: ["codigo_usuario", "comentario", "calificacion"],
+          properties: {
+            codigo_usuario: {
+              bsonType: "int",
+            },
+            comentario: {
+              bsonType: "string",
+            },
+            calificacion: {
+              bsonType: "int",
+            }
+          }
+        }
+      }
+    }
+  }
+});
+
+db.createCollection("usuarios",{
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            required: ["nombre", "apellido", "correo", "contrasena", "fecha_nacimiento", "telefono"],
+            properties: {
+                nombre: {
+                    bsonType: "string",
+                },
+                apellido: {
+                    bsonType: "string",
+                },
+                correo: {
+                    bsonType: "string",
+                },
+                contrasena: {
+                    bsonType: "string",
+                },
+                fecha_nacimiento: {
+                    bsonType: "date",
+                }
+            }
+        }
+    }
+});
+
+db.createCollection("organizadores", {
+    validator: {
+        $jsonSchema: {
+        bsonType: "object",
+        required: ["nombre", "correo", "contrasena", "telefono"],
+        properties: {
+            nombre: {
+            bsonType: "string",
+            },
+            correo: {
+            bsonType: "string",
+            },
+            contrasena: {
+            bsonType: "string",
+            },
+            telefono: {
+            bsonType: "string",
+            },
+
+        }
+        }
+    }
+});
+
+db.createCollection("tipo_suscripciones", {
+    validator: {
+        $jsonSchema: {
+        bsonType: "object",
+        required: ["nombre", "descripcion", "descuento"],
+        properties: {
+            nombre: {
+            bsonType: "string",
+            },
+            descripcion: {
+            bsonType: "string",
+            },
+            descuento: {
+            bsonType: "decimal",
+            },
+        }
+        }
+    }
+});
+
+db.createCollection("suscripciones", {
+    validator: {
+        $jsonSchema: {
+        bsonType: "object",
+        required: ["codigo_usuario", "codigo_tipo_suscripcion", "fecha_inicio", "fecha_fin"],
+        properties: {
+            codigo_usuario: {
+            bsonType: "int",
+            },
+            codigo_tipo_suscripcion: {
+            bsonType: "int",
+            },
+            fecha_inicio: {
+            bsonType: "date",
+            },
+            fecha_fin: {
+            bsonType: "date",
+            },
+        }
+        }
+    }
+});
+
+db.createCollection("entradas", {
+    validator: {
+        $jsonSchema: {
+        bsonType: "object",
+        required: ["codigo_evento", "precio"],
+        properties: {
+            codigo_evento: {
+            bsonType: "int",
+            },
+            precio: {
+            bsonType: "decimal",
+            },
+        }
+        }
+    }
+});
+
+db.createCollection("compras", {
+    validator: {
+        $jsonSchema: {
+        bsonType: "object",
+        required: ["codigo_usuario", "codigo_entrada", "fecha_compra", "cantidad"],
+        properties: {
+            codigo_usuario: {
+            bsonType: "int",
+            },
+            codigo_entrada: {
+            bsonType: "int",
+            },
+            fecha_compra: {
+            bsonType: "date",
+            },
+            cantidad: {
+            bsonType: "int",
+            },
+        }
+        }
+    }
+});
+// Creacion de datos
+db.usuarios.insertMany([
+  {
+    _id: '1',
+    nombre: "Juan",
+    apellido: "Hurtado",
+    correo: "anHurtado@gmail.com",
+    contrasena: "perro123",
+    fecha_nacimiento: ISODate("1990-12-10"),
+    telefono: "123456789"
+  },
+  {
+    _id: '2',
+    nombre: "Juan",
+    apellido: "Alvarez",
+    correo: "juAlvarez@gmail.com",
+    contrasena: "futbol123",
+    fecha_nacimiento: ISODate("1993-10-11"),
+    telefono: "987654321"
+  },
+  {
+    _id: '3',
+    nombre: "Maria",
+    apellido: "Perez",
+    correo: "maPerez@gmail.com",
+    contrasena: "gato123",
+    fecha_nacimiento: ISODate("1995-11-12"),
+    telefono: "123456789"
+  },
+  {
+    _id: '4',
+    nombre: "Pedro",
+    apellido: "Garcia",
+    correo: "peGaria@gmail.com",
+    contrasena: "perro123",
+    fecha_nacimiento: ISODate("1990-12-10"),
+    telefono: "123456789"
+  },
+  {
+    _id: '5',
+    nombre: "Carlos",
+    apellido: "Gonzales",
+    correo: "caGonzales@gmail.com",
+    contrasena: "capitan23",
+    fecha_nacimiento: ISODate("1993-10-11"),
+    telefono: "987654321"
+  }
+]);
+
+
+db.tipo_suscripciones.insertMany([
+  {
+    _id: '1',
+    nombre: "Clasica",
+    descripcion: "Suscripción gratuita sin beneficios",
+    descuento: NumberDecimal("0.00")
+  },
+  {
+    _id: '2',
+    nombre: "Plata",
+    descripcion: "Suscripción premium de rango bajo que permite acceder a los eventos con anticipación",
+    descuento: NumberDecimal("0.10")
+  },
+  {
+    _id: '3',
+    nombre: "Oro",
+    descripcion: "Suscripción premium de rango medio que permite acceder a los eventos con anticipación y desbloquear promociones",
+    descuento: NumberDecimal("0.20")
+  },
+  {
+    _id: '4',
+    nombre: "Black",
+    descripcion: "Suscripción premium de rango alto que permite acceder a los eventos con anticipación y desbloquear promociones y tener beneficios VIP",
+    descuento: NumberDecimal("0.30")
+  }
+]);
+
+//Organizadores
+db.organizadores.insertMany([
+  {
+    _id: '1',
+    nombre: "StormMusic",
+    correo: "stormmusic1988@gmail.com",
+    contrasena: "Strone432%",
+    telefono: "965432189",
+  },
+  {
+    _id: '2',
+    nombre: "JuanpoProducciones",
+    correo: "jjproductions@gmail.com",
+    contrasena: "pohfdss54",
+    telefono: "934567890",
+  },
+  {
+    _id: '3',
+    nombre: "Marieventos",
+    correo: "mari.eventos1@gmail.com",
+    contrasena: "pohfdss54",
+    telefono: "978123456",
+  },
+  {
+    _id: '4',
+    nombre: "EventosPro",
+    correo: "eventospro32@gmail.com",
+    contrasena: "hftiv12",
+    telefono: "923456789",
+  },
+  {
+    _id: '5',
+    nombre: "PlanificaFest",
+    correo: "planifica.fest1992@gmail.com",
+    contrasena: "fgvcgrb#",
+    telefono: "943217865",
+  },
+  {
+    _id: '6',
+    nombre: "LauShows",
+    correo: "laushows28@gmail.com",
+    contrasena: "puojddj#",
+    telefono: "912345678",
+  },
+  {
+    _id: '7',
+    nombre: "DreamMakers",
+    correo: "dream.events@gmail.com",
+    contrasena: "fniedpt",
+    telefono: "956781234",
+  },
+  {
+    _id: '8',
+    nombre: "SofiaTorresShow",
+    correo: "sofitorres.shows2705@gmail.com",
+    contrasena: "Sosrkof",
+    telefono: "987654321",
+  },
+  {
+    _id: '9',
+    nombre: "PlanItPerfect",
+    correo: "planitperfect.events22@gmail.com",
+    contrasena: "Sayoifn88",
+    telefono: "942718365",
+  },
+  {
+    _id: '10',
+    nombre: "BeyondImaginationEvents",
+    correo: "beyond.imagination3@gmail.com",
+    contrasena: "bbrreti_33",
+    telefono: "968574321",
+  },
+]);
+
+db.eventos.insertMany([
+  {
+    codigo_organizador: 1,
+    ubicacion: {
+      distrito: "Surquillo",
+      ciudad: "Lima",
+      direccion: "Calle Octavio Paz, 255"
+    },
+    detalles_evento: {
+      nombre: "Celebración a la marinera",
+      fecha: ISODate("2023-12-01"),
+      hora: "16:00 PM",
+      descripcion: "Únete a la celebración de uno de los bailes más representativos del país, la marinera. Este evento cultural tendrá actividades interactivas entre todos los participantes como concurso de baile, aprendizaje de su historia, vestimenta y la diferencia que hay entre cada tipo de marinera",
+      entradas: 32
+    },
+    categorias: {
+      nombre: "Música",
+      descripcion: "Vive la música de la mejor manera"
+    },
+    resenias: [
+      {
+        codigo_usuario: 1,
+        comentario: "Diversión asegurada!",
+        calificacion: 5
+      },
+      {
+        codigo_usuario: 2,
+        comentario: "Gran evento!",
+        calificacion: 4
+      }
+    ]
+  },
+
+  {
+    codigo_organizador: 2,
+    ubicacion: {
+      distrito: "La Victoria",
+      ciudad: "Lima",
+      direccion: "Avenida República De Panamá, 2577"
+    },
+    detalles_evento: {
+      nombre: "Exposición de textiles prehispánicos",
+      fecha: ISODate("2024-05-14"),
+      hora: "20:00 PM",
+      descripcion: "Esta exposición sobre los textiles prehispánicos espera que se pueda brindar un mejor guía sobre el rol que cumplían antes de la Conquista Española. Con ayuda del Ministerio de Cultura, este evento tendrá disponible más de 100 ejemplares en buen estado",
+      entradas: 50
+    },
+    categorias: {
+      nombre: "Arte",
+      descripcion: "Para amantes del arte moderno"
+    },
+    resenias: [
+      {
+        codigo_usuario: 3,
+        comentario: "Interesante exposición",
+        calificacion: 5
+      },
+      {
+        codigo_usuario: 4,
+        comentario: "Maravillosos textiles",
+        calificacion: 4
+      }
+    ]
+  },
+
+   {
+    codigo_organizador: 3,
+    ubicacion: {
+      distrito: "Santiago De Surco",
+      ciudad: "Lima",
+      direccion: "Conde De Nieva, 243"
+    },
+    detalles_evento: {
+      nombre: "Recorrido: Gastronomía Peruana",
+      fecha: ISODate("2023-11-30"),
+      hora: "10:00 AM",
+      descripcion: "Deléitate con los sabores auténticos de la comida peruana en una mañana llena de platos deliciosos y representativos del país. Contamos con más de 50 stands de comida para que se sienta la inmensa diversidad de nuestra gastronomía",
+      entradas: 15
+    },
+    categorias: {
+      nombre: "Gastronomía",
+      descripcion: "Conoce y prueba la gastronomia peruana"
+    },
+    resenias: [
+      {
+        codigo_usuario: 5,
+        comentario: "Maravillosa gastronomía",
+        calificacion: 5
+      },
+      {
+        codigo_usuario: 4,
+        comentario: "No fue lo que esperaba",
+        calificacion: 2
+      }
+    ]
+  },
+  //4
+  {
+    codigo_organizador: 4,
+    ubicacion: {
+      distrito: "Santiago De Surco",
+      ciudad: "Lima",
+      direccion: "Conde De Nieva, 243"
+    },
+    detalles_evento: {
+       nombre: "Taller de Cerámica Moche",
+       fecha: ISODate("2024-06-04"),
+       hora: "13:00 PM",
+       descripcion: "Aventúrate a aprender las técnicas antiguas de cerámica de la reconocida cultura Moche en un taller interactivo que te conectará con la historia de nuestro país",
+       entradas: 23
+    },
+    categorias: {
+    nombre: "Arte",
+    descripcion: "Para amantes del arte moderno"
+    },
+    resenias: [
+      {
+        codigo_usuario: 2,
+        comentario: "Un taller muy interesante",
+        calificacion: 5
+      },
+      {
+        codigo_usuario: 1,
+        comentario: "Fue pésimo, no lo recomiendo",
+        calificacion: 1
+      }
+    ]
+  },
+  //5
+  {
+    codigo_organizador: 5,
+    ubicacion: {
+    distrito: "El Cercado",
+    ciudad: "Lima",
+    direccion: "Julio Rodavero 682 Urb. Las Brisas"
+    },
+    detalles_evento: {
+        nombre: "Narración de libros peruanos",
+        fecha: ISODate("2023-11-25"),
+        hora: "15:30 PM",
+        descripcion: "Adéntrate a este maravilloso mundo que es la literatura peruana con las diversas narraciones de libros ampliamente reconocidos del país. Desde Clorinda Matto de Turner, Julio Ramón Ribeyro, Ciro Alegría, entre otros. Además, se dará una breve explicación del significado de cada libro",
+        entradas: 20
+    },
+    categorias: {
+    nombre: "Educación",
+    descripcion: "Aprende mientras te diviertes"
+    },
+    resenias: [
+      {
+        codigo_usuario: 1,
+        comentario: "Interesante forma de aprender",
+        calificacion: 5
+      },
+      {
+        codigo_usuario: 3,
+        comentario: "Muy buena narración",
+        calificacion: 5
+      }
+    ]
+  },
+  //6
+  {
+    codigo_organizador: 6,
+    ubicacion: {
+    distrito: "Pueblo Libre",
+    ciudad: "Lima",
+    direccion: "Jr. Cartagena 121"
+    },
+    detalles_evento: {
+    nombre: "Exhibición: Orquídeas Peruanas",
+    fecha: ISODate("2023-12-06"),
+    hora: "14:00 PM",
+    descripcion: "Admira una impresionante colección de orquídeas nativas de Perú en esta exposición llena de colores y vida. Desde la explicación de qué significa cada color hasta cuál es tu tiempo de florecimiento con sus respectivos cuidados; todo estará debidamente guiado por expertos",
+    entradas: 10
+    },
+    categorias: {
+    nombre: "Educación",
+    descripcion: "Aprende mientras te diviertes"
+    },
+    resenias: [
+      {
+        codigo_usuario: 2,
+        comentario: "Bella y relajante exposición",
+        calificacion: 4
+      },
+      {
+        codigo_usuario: 4,
+        comentario: "Esperaba más diversidad de orquídeas",
+        calificacion: 3
+      }
+    ]
+  },
+  //7
+  {
+    codigo_organizador: 7,
+    ubicacion: {
+    distrito: "Santiago De Surco",
+    ciudad: "Lima",
+    direccion: "Avenida Manuel Olguin, 561"
+    },
+    detalles_evento: {
+    nombre: "Tardes de leyendas peruanas",
+    fecha: ISODate("2023-10-30"),
+    hora: "18:00 PM",
+    descripcion: "Explora este desconocido mundo para muchos, las leyendas que representan a nuestro país y su historia. Desde la leyenda del Ayaymama hasta la de los Hermanos Ayar. Descubre cómo han influenciado en cada uno de nosotros y su debido contexto histórico para aprender un poco más del Perú",
+    entradas: 5
+    },
+    categorias: {
+    nombre: "Terror",
+    descripcion: "Vive las experiencias más escalofriantes"
+    },
+    resenias: [
+      {
+        codigo_usuario: 5,
+        comentario: "Buena selección de leyendas",
+        calificacion: 5
+      },
+      {
+        codigo_usuario: 3,
+        comentario: "No fue ameno",
+        calificacion: 1
+      }
+    ]
+  },
+  //8
+  {
+    codigo_organizador: 8,
+    ubicacion: {
+    distrito: "Miraflores",
+    ciudad: "Lima",
+    direccion: "Avenida Ignacio Merino, 636"
+    },
+    detalles_evento: {
+    nombre: "Viva Folclore",
+    fecha: ISODate("2023-11-28"),
+    hora: "21:00 PM",
+    descripcion: "Disfruta uno de los conciertos más relevantes de Lima, Viva Folclore. Este concierto contará con distintos artistas representantes del folclore peruano, brindando una experiencia inolvidable con los distintivos instrumentos y letras con los cuales se identifica nuestra cultura",
+    entradas: 75
+    },
+    categorias: {
+    nombre: "Música",
+    descripcion: "Vive la música de la mejor manera"
+    },
+    resenias: [
+      {
+        codigo_usuario: 3,
+        comentario: "Gran concierto",
+        calificacion: 5
+      },
+      {
+        codigo_usuario: 4,
+        comentario: "Gran experiencia, lo recomiendo",
+        calificacion: 5
+      }
+    ]
+  },
+  //9
+  {
+    codigo_organizador: 9,
+    ubicacion: {
+    distrito: "Pueblo Libre",
+    ciudad: "Lima",
+    direccion: "Jr. Cartagena 121"
+    },
+    detalles_evento: {
+    nombre: "Cantos angelicales",
+    fecha: ISODate("2023-11-14"),
+    hora: "17:00 PM",
+    descripcion: "Sumérgete en un mundo celestial de armonía y emoción en 'Cantos Angelicales', un evento cultural que te transportará a través de melodías divinas y voces celestiales en una experiencia única e inolvidable",
+    entradas: 70
+    },
+    categorias: {
+    nombre: "Caridad",
+    descripcion: "Oportunidad para apoyar a los que más lo necesitan"
+    },
+    resenias: [
+      {
+        codigo_usuario: 2,
+        comentario: "No se escuchaba bien",
+        calificacion: 3
+      },
+      {
+        codigo_usuario: 3,
+        comentario: "Muchas fallas técnicas",
+        calificacion: 1
+      }
+    ]
+  },
+  //10
+  {
+    codigo_organizador: 10,
+    ubicacion: {
+    distrito: "San Juan De Lurigancho",
+    ciudad: "Lima",
+    direccion: "Calle Lass, 217"
+    },
+    detalles_evento: {
+    nombre: "Noche Criolla",
+    fecha: ISODate("2023-12-06"),
+    hora: "20:00 PM",
+    descripcion: "Disfruta de una llena de música, comida y bailes criollos peruanos en nuestro evento especial. Trae a toda tu familia a esta bella conmemoración a una parte de nuestra historia",
+    entradas: 80
+
+    },
+    categorias: {
+    nombre: "Arte",
+    descripcion: "Para amantes del arte moderno"
+    },
+    resenias: [
+      {
+        codigo_usuario: 5,
+        comentario: "Muy buena organización",
+        calificacion: 5
+      },
+      {
+        codigo_usuario: 1,
+        comentario: "Bailamos toda la noche",
+        calificacion: 4
+      }
+    ]
+  },
+]);
+
+// Creacion de datos
+db.entradas.insertMany([
+  {
+    _id:1,
+    codigo_evento:1,
+    precio: NumberDecimal(42.50)
+  },
+  {
+_id:2,
+    codigo_evento:2,
+    precio: NumberDecimal(38.25)
+  },
+  {
+_id:3,
+    codigo_evento:3,
+    precio: NumberDecimal(82.30)
+  },
+  {
+_id:4,
+    codigo_evento:4,
+    precio: NumberDecimal(40.25)
+  },
+  {
+_id:5,
+    codigo_evento:5,
+    precio: NumberDecimal(32.80)
+  },
+  {
+_id:6,
+    codigo_evento:6,
+    precio: NumberDecimal(59.90)
+  },
+  {
+_id:7,
+    codigo_evento:7,
+    precio: NumberDecimal(23.30)
+  },
+  {
+_id:8,
+    codigo_evento:8,
+    precio: NumberDecimal(55.20)
+  },
+  {
+_id:9,
+    codigo_evento:9,
+    precio: NumberDecimal(26.80)
+  },
+  {
+_id:10,
+    codigo_evento:10,
+    precio: NumberDecimal(48.90)
+  },
+]);
+
+
+db.compras.insertMany(
+[{
+ codigo_usuario:1,
+ codigo_entrada: 1,
+ fecha_compra: ISODate("2024-01-21"),
+ cantidad:2
+},
+{
+ codigo_usuario:2,
+ codigo_entrada: 2,
+ fecha_compra: ISODate("2024-01-21"),
+ cantidad:3
+},
+{
+ codigo_usuario:3,
+ codigo_entrada: 3,
+ fecha_compra: ISODate("2024-01-21"),
+ cantidad:1
+},
+{
+ codigo_usuario:4,
+ codigo_entrada: 4,
+ fecha_compra: ISODate("2024-02-10"),
+ cantidad:3
+},
+{
+ codigo_usuario:5,
+ codigo_entrada: 5,
+ fecha_compra: ISODate("2024-02-10"),
+ cantidad: 4
+},
+{
+ codigo_usuario:6,
+ codigo_entrada: 6,
+ fecha_compra: ISODate("2024-02-22"),
+ cantidad:1
+},
+{
+ codigo_usuario:7,
+ codigo_entrada: 7,
+ fecha_compra: ISODate("2024-02-22"),
+ cantidad:5
+},
+{
+ codigo_usuario:8,
+ codigo_entrada: 8,
+ fecha_compra: ISODate("2024-02-22"),
+ cantidad:2
+},
+{
+ codigo_usuario:9,
+ codigo_entrada: 9,
+ fecha_compra: ISODate("2024-03-15"),
+ cantidad:4
+},
+{
+ codigo_usuario:10,
+ codigo_entrada: 10,
+ fecha_compra: ISODate("2024-03-15"),
+ cantidad:2
+}
+]);
+
+db.suscripciones.insertMany([
+	{
+    codigo_usuario:1,
+    codigo_tipo_suscripcion:1,
+    fecha_inicio: ISODate("2016-10-09"),
+    fecha_fin: ISODate("2020-11-12"),
+  },
+  {
+    codigo_usuario:2,
+    codigo_tipo_suscripcion:2,
+    fecha_inicio: ISODate("2021-06-24"),
+    fecha_fin: ISODate("2022-05-01"),
+  },
+  {
+    codigo_usuario:3,
+    codigo_tipo_suscripcion:3,
+    fecha_inicio: ISODate("2018-05-15"),
+    fecha_fin: ISODate("2019-08-22"),
+  },
+  {
+    codigo_usuario:4,
+    codigo_tipo_suscripcion:4,
+    fecha_inicio: ISODate("2020-01-10"),
+    fecha_fin: ISODate("2020-06-28"),
+  },
+ {
+    codigo_usuario: 5,
+    codigo_tipo_suscripcion: 1,
+    fecha_inicio: ISODate("2021-03-14"),
+    fecha_fin: ISODate("2021-09-05"),
+  },
+ {
+    codigo_usuario:1,
+    codigo_tipo_suscripcion:2,
+    fecha_inicio: ISODate("2019-11-30"),
+    fecha_fin: ISODate("2022-02-18"),
+  },
+ {
+    codigo_usuario:2,
+    codigo_tipo_suscripcion:3,
+    fecha_inicio: ISODate("2019-05-30"),
+    fecha_fin: ISODate("2022-01-25"),
+  },
+ {
+    codigo_usuario:3,
+    codigo_tipo_suscripcion:4,
+    fecha_inicio: ISODate("2021-04-12"),
+    fecha_fin: ISODate("2022-06-03"),
+  },
+ {
+    codigo_usuario:4,
+    codigo_tipo_suscripcion:1,
+    fecha_inicio: ISODate("2022-09-19"),
+    fecha_fin: ISODate("2022-11-15"),
+  },
+ {
+    codigo_usuario:5,
+    codigo_tipo_suscripcion:2,
+    fecha_inicio: ISODate("2019-07-15"),
+    fecha_fin: ISODate("2020-08-12"),
+  }
+]);
+
