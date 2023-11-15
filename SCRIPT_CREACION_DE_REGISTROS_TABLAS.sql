@@ -33,7 +33,7 @@ GO
 EXEC USPRegistroUusarios 
 	@Nombre  = 'Cintia', 
 	@Contrasenia = '7x6Ugc1LZc',
-	@Apellidos = 'RamÛn Valle', 
+	@Apellidos = 'Ram√≥n Valle', 
 	@Correo = 'cinram@gmail.com', 
 	@Telefono = '931953301',
 	@Fecha_nacimiento = '1978-06-23'
@@ -53,7 +53,7 @@ GO
 EXEC USPRegistroUusarios 
 	@Nombre  = 'Victoria', 
 	@Contrasenia = 'FE6Z6XYc2s',
-	@Apellidos = '¡vila LLamas', 
+	@Apellidos = '√Åvila LLamas', 
 	@Correo = 'vicavi18@gmail.com', 
 	@Telefono = '951892677',
 	@Fecha_nacimiento = '1987/12/18'
@@ -93,7 +93,7 @@ GO
 EXEC USPRegistroUusarios 
 	@Nombre  = 'Nicole', 
 	@Contrasenia = 'ux299qAZv4',
-	@Apellidos = 'Valenzuela PÈrez', 
+	@Apellidos = 'Valenzuela P√©rez', 
 	@Correo = 'nicval11@gmail.com', 
 	@Telefono = '936152655',
 	@Fecha_nacimiento = '1997/02/11'
@@ -238,7 +238,7 @@ GO
 EXEC USPRegistroUbicaciones 
 	@Distrito = 'La Victoria',
 	@Ciudad = 'Lima' ,
-	@Direccion = 'Avenida Rep˙blica De Panam·, 2577',
+	@Direccion = 'Avenida Rep√∫blica De Panam√°, 2577',
 	@Referencia = 'Cdra. 10 Av. Iquitos Cruce con Jr. Canta'
 GO
 
@@ -275,12 +275,12 @@ EXEC USPRegistroCategorias
 GO
 --2
 EXEC USPRegistroCategorias
-	@Nombre = 'EducaciÛn',
+	@Nombre = 'Educaci√≥n',
 	@Descripcion = 'Aprende mientras te diviertes'
 GO
 --3
 EXEC USPRegistroCategorias
-	@Nombre = 'M˙sica',
+	@Nombre = 'M√∫sica',
 	@Descripcion = 'Vive la musica de la mejor manera'
 GO
 --4
@@ -290,7 +290,7 @@ EXEC USPRegistroCategorias
 GO
 --5
 EXEC USPRegistroCategorias
-	@Nombre = 'GastronomÌa',
+	@Nombre = 'Gastronom√≠a',
 	@Descripcion = 'Conoce y prueba la gastronomia peruana'
 GO
 --6
@@ -300,7 +300,7 @@ EXEC USPRegistroCategorias
 GO
 --7
 EXEC USPRegistroCategorias
-	@Nombre = 'TecnologÌa',
+	@Nombre = 'Tecnolog√≠a',
 	@Descripcion = 'Para amantes de la tecnologia e informatica'
 GO
 --8
@@ -324,60 +324,60 @@ GO
 EXEC USPRegistroEventos
 	@Codigo_organizadores = '1',
 	@Codigo_ubicaciones = '3',
-	@Nombre = 'CelebraciÛn a la marinera',
+	@Nombre = 'Celebraci√≥n a la marinera',
 	@Fecha = '2023-12-01',
 	@Hora = '16:00',
-	@Descripcion = '⁄nete a la celebraciÛn de uno de los bailes m·s representativos del paÌs, la marinera. Este evento cultural tendr· actividades interactivas entre todos los participantes como concurso de baile, aprendizaje de su historia, vestimenta y la diferencia que hay entre cada tipo de marinera',
+	@Descripcion = '√önete a la celebraci√≥n de uno de los bailes m√°s representativos del pa√≠s, la marinera. Este evento cultural tendr√° actividades interactivas entre todos los participantes como concurso de baile, aprendizaje de su historia, vestimenta y la diferencia que hay entre cada tipo de marinera',
 	@Entradas = 32
 GO
 --2
 EXEC USPRegistroEventos
 	@Codigo_organizadores = '2',
 	@Codigo_ubicaciones = '5',
-	@Nombre = 'ExposiciÛn de textiles prehisp·nicos',
+	@Nombre = 'Exposici√≥n de textiles prehisp√°nicos',
 	@Fecha = '2024-05-14',
 	@Hora = '20:00',
-	@Descripcion = 'Esta exposiciÛn sobre los textiles prehisp·nicos espera que se pueda brindar un mejor guÌa sobre el rol que cumplÌan antes de la Conquista EspaÒola. Con ayuda del Ministerio de Cultura, este evento tendr· disponible m·s de 100 ejemplares en buen estado',
+	@Descripcion = 'Esta exposici√≥n sobre los textiles prehisp√°nicos espera que se pueda brindar un mejor gu√≠a sobre el rol que cumpl√≠an antes de la Conquista Espa√±ola. Con ayuda del Ministerio de Cultura, este evento tendr√° disponible m√°s de 100 ejemplares en buen estado',
 	@Entradas = 50
 GO
 --3
 EXEC USPRegistroEventos
 	@Codigo_organizadores = '2',
 	@Codigo_ubicaciones = '7',
-	@Nombre = 'Recorrido: GastronomÌa Peruana',
+	@Nombre = 'Recorrido: Gastronom√≠a Peruana',
 	@Fecha = '2023-11-30',
 	@Hora = '10:00',
-	@Descripcion = 'DelÈitate con los sabores autÈnticos de la comida peruana en una maÒana llena de platos deliciosos y representativos del paÌs. Contamos con m·s de 50 stands de comida para que se sienta la inmensa diversidad de nuestra gastronomÌa',
+	@Descripcion = 'Del√©itate con los sabores aut√©nticos de la comida peruana en una ma√±ana llena de platos deliciosos y representativos del pa√≠s. Contamos con m√°s de 50 stands de comida para que se sienta la inmensa diversidad de nuestra gastronom√≠a',
 	@Entradas = 15
 GO
 --4
 EXEC USPRegistroEventos
 	@Codigo_organizadores = '5',
 	@Codigo_ubicaciones = '8',
-	@Nombre = 'Taller de Cer·mica Moche',
+	@Nombre = 'Taller de Cer√°mica Moche',
 	@Fecha = '2024-06-04',
 	@Hora = '13:00',
-	@Descripcion = 'Avent˙rate a aprender las tÈcnicas antiguas de cer·mica de la reconocida cultura Moche en un taller interactivo que te conectar· con la historia de nuestro paÌs',
+	@Descripcion = 'Avent√∫rate a aprender las t√©cnicas antiguas de cer√°mica de la reconocida cultura Moche en un taller interactivo que te conectar√° con la historia de nuestro pa√≠s',
 	@Entradas = 23
 GO
 --5
 EXEC USPRegistroEventos
 	@Codigo_organizadores = '8',
 	@Codigo_ubicaciones = '10',
-	@Nombre = 'NarraciÛn de libros peruanos',
+	@Nombre = 'Narraci√≥n de libros peruanos',
 	@Fecha = '2023-11-25',
 	@Hora = '15:30',
-	@Descripcion = 'AdÈntrate a este maravilloso mundo que es la literatura peruana con las diversas narraciones de libros ampliamente reconocidos del paÌs. Desde Clorinda Matto de Turner, Julio RamÛn Ribeyro, Ciro AlegrÌa, entre otros. Adem·s, se dar· una breve explicaciÛn del significado de cada libro',
+	@Descripcion = 'Ad√©ntrate a este maravilloso mundo que es la literatura peruana con las diversas narraciones de libros ampliamente reconocidos del pa√≠s. Desde Clorinda Matto de Turner, Julio Ram√≥n Ribeyro, Ciro Alegr√≠a, entre otros. Adem√°s, se dar√° una breve explicaci√≥n del significado de cada libro',
 	@Entradas = 20
 GO
 --6
 EXEC USPRegistroEventos
 	@Codigo_organizadores = '9',
 	@Codigo_ubicaciones = '10',
-	@Nombre = 'ExhibiciÛn: OrquÌdeas Peruanas',
+	@Nombre = 'Exhibici√≥n: Orqu√≠deas Peruanas',
 	@Fecha = '2023-12-06',
 	@Hora = '14:00',
-	@Descripcion = 'Admira una impresionante colecciÛn de orquÌdeas nativas de Per˙ en esta exposiciÛn llena de colores y vida. Desde la explicaciÛn de quÈ significa cada color hasta cu·l es tu tiempo de florecimiento con sus respectivos cuidados; todo estar· debidamente guiado por expertos',
+	@Descripcion = 'Admira una impresionante colecci√≥n de orqu√≠deas nativas de Per√∫ en esta exposici√≥n llena de colores y vida. Desde la explicaci√≥n de qu√© significa cada color hasta cu√°l es tu tiempo de florecimiento con sus respectivos cuidados; todo estar√° debidamente guiado por expertos',
 	@Entradas = 10
 GO
 --7
@@ -387,7 +387,7 @@ EXEC USPRegistroEventos
 	@Nombre = 'Tardes de leyendas peruanas',
 	@Fecha = '2023-10-30',
 	@Hora = '18:00',
-	@Descripcion = 'Explora este desconocido mundo para muchos, las leyendas que representan a nuestro paÌs y su historia. Desde la leyenda del Ayaymama hasta la de los Hermanos Ayar. Descubre cÛmo han influenciado en cada uno de nosotros y su debido contexto histÛrico para aprender un poco m·s del Per˙',
+	@Descripcion = 'Explora este desconocido mundo para muchos, las leyendas que representan a nuestro pa√≠s y su historia. Desde la leyenda del Ayaymama hasta la de los Hermanos Ayar. Descubre c√≥mo han influenciado en cada uno de nosotros y su debido contexto hist√≥rico para aprender un poco m√°s del Per√∫',
 	@Entradas = 5
 GO
 --8
@@ -397,7 +397,7 @@ EXEC USPRegistroEventos
 	@Nombre = 'Viva Folclore',
 	@Fecha = '2023-11-28',
 	@Hora = '21:00',
-	@Descripcion = 'Disfruta uno de los conciertos m·s relevantes de Lima, Viva Folclore. Este concierto contar· con distintos artistas representantes del folclore peruano, brindando una experiencia inolvidable con los distintivos instrumentos y letras con los cuales se identifica nuestra cultura',
+	@Descripcion = 'Disfruta uno de los conciertos m√°s relevantes de Lima, Viva Folclore. Este concierto contar√° con distintos artistas representantes del folclore peruano, brindando una experiencia inolvidable con los distintivos instrumentos y letras con los cuales se identifica nuestra cultura',
 	@Entradas = 75
 GO
 --9
@@ -407,8 +407,9 @@ EXEC USPRegistroEventos
 	@Nombre = 'Cantos angelicales',
 	@Fecha = '2023-11-14',
 	@Hora = '17:00',
-	@Descripcion = 'SumÈrgete en un mundo celestial de armonÌa y emociÛn en "Cantos Angelicales", un evento cultural que te transportar· a travÈs de melodÌas divinas y voces celestiales en una experiencia ˙nica e inolvidable',
+	@Descripcion = 'Sum√©rgete en un mundo celestial de armon√≠a y emoci√≥n en "Cantos Angelicales", un evento cultural que te transportar√° a trav√©s de melod√≠as divinas y voces celestiales en una experiencia √∫nica e inolvidable',
 	@Entradas = 70
+GO
 --10
 EXEC USPRegistroEventos
 	@Codigo_organizadores = '6',
@@ -416,7 +417,7 @@ EXEC USPRegistroEventos
 	@Nombre = 'Noche Criolla',
 	@Fecha = '2023-12-06',
 	@Hora = '20:00',
-	@Descripcion = 'Disfruta de una llena de m˙sica, comida y bailes criollos peruanos en nuestro evento especial. Trae a toda tu familia a esta bella conmemoraciÛn a una parte de nuestra historia',
+	@Descripcion = 'Disfruta de una llena de m√∫sica, comida y bailes criollos peruanos en nuestro evento especial. Trae a toda tu familia a esta bella conmemoraci√≥n a una parte de nuestra historia',
 	@Entradas = 80
 GO
 
@@ -471,8 +472,6 @@ EXEC USPRegistroCategoriasEventos
 	@Codigo_categorias = '4',
 	@Codigo_eventos = '10'
 GO
-
-
 
 --CREACION DE ENTRADAS
 --1
@@ -532,7 +531,7 @@ GO
 EXEC USPRegistroCompras
 	@Codigo_usuarios = '2',
 	@Codigo_entradas = '4',
-	@Metodo_pago = 'Tarjeta de crÈdito',
+	@Metodo_pago = 'Tarjeta de cr√©dito',
 	@Cantidad = '3',
 	@Fecha = '2023-05-04'
 GO
@@ -540,7 +539,7 @@ GO
 EXEC USPRegistroCompras
 	@Codigo_usuarios = '5',
 	@Codigo_entradas = '1',
-	@Metodo_pago = 'Tarjeta de crÈdito',
+	@Metodo_pago = 'Tarjeta de cr√©dito',
 	@Cantidad = '2',
 	@Fecha = '2023-11-07'
 
@@ -589,7 +588,7 @@ GO
 EXEC USPRegistroCompras
 	@Codigo_usuarios = '1',
 	@Codigo_entradas = '10',
-	@Metodo_pago = 'Tarjeta de crÈdito',
+	@Metodo_pago = 'Tarjeta de cr√©dito',
 	@Cantidad = '4',
 	@Fecha = '2023-02-01'
 GO
@@ -597,7 +596,7 @@ GO
 EXEC USPRegistroCompras
 	@Codigo_usuarios = '2',
 	@Codigo_entradas = '7',
-	@Metodo_pago = 'Tarjeta de crÈdito',
+	@Metodo_pago = 'Tarjeta de cr√©dito',
 	@Cantidad = '2',
 	@Fecha = '2023-05-04'
 GO
@@ -610,15 +609,11 @@ EXEC USPRegistroCompras
 	@Fecha = '2023-11-30'
 GO
 
-
-
-
-
 --CREACION DE RESENIAS
 --1
 EXEC USPRegistroResenias
 	@Calificacion = '4',
-	@Comentario = 'La "CelebraciÛn a la Marinera" fue una experiencia cultural vibrante. La participaciÛn activa en el concurso de baile y el aprendizaje de la historia y vestimenta agregaron un toque ˙nico. Aunque podrÌa profundizar m·s en la historia, es un evento recomendado para aquellos que buscan sumergirse en la tradiciÛn de la marinera.',
+	@Comentario = 'La "Celebraci√≥n a la Marinera" fue una experiencia cultural vibrante. La participaci√≥n activa en el concurso de baile y el aprendizaje de la historia y vestimenta agregaron un toque √∫nico. Aunque podr√≠a profundizar m√°s en la historia, es un evento recomendado para aquellos que buscan sumergirse en la tradici√≥n de la marinera.',
 	@Codigo_compras_usuarios = '2',
 	@Codigo_compras_entradas = '4'
 GO
@@ -626,7 +621,7 @@ GO
 --2
 EXEC USPRegistroResenias
 	@Calificacion = '4',
-	@Comentario = 'La "ExposiciÛn de Textiles Prehisp·nicos" fue una experiencia reveladora. Los m·s de 100 ejemplares en excelente estado respaldados por el Ministerio de Cultura ofrecieron una visiÛn autÈntica del pasado. Aunque me hubiera encantado una interacciÛn m·s directa con las piezas, la exhibiciÛn fue educativa y visualmente impresionante, sumergiÈndome en la rica historia de los textiles prehisp·nicos.',
+	@Comentario = 'La "Exposici√≥n de Textiles Prehisp√°nicos" fue una experiencia reveladora. Los m√°s de 100 ejemplares en excelente estado respaldados por el Ministerio de Cultura ofrecieron una visi√≥n aut√©ntica del pasado. Aunque me hubiera encantado una interacci√≥n m√°s directa con las piezas, la exhibici√≥n fue educativa y visualmente impresionante, sumergi√©ndome en la rica historia de los textiles prehisp√°nicos.',
 	@Codigo_compras_usuarios = '5',
 	@Codigo_compras_entradas = '1'
 GO
@@ -634,7 +629,7 @@ GO
 --3
 EXEC USPRegistroResenias
 	@Calificacion = '5',
-	@Comentario = 'El "Recorrido: GastronomÌa Peruana" fue una experiencia culinaria excepcional con m·s de 50 stands que ofrecÌan una autÈntica y diversa muestra de la comida peruana. Cada bocado era una deliciosa aventura que celebraba la riqueza gastronÛmica del paÌs. Altamente recomendado para los amantes de la buena comida y la cultura culinaria.',
+	@Comentario = 'El "Recorrido: Gastronom√≠a Peruana" fue una experiencia culinaria excepcional con m√°s de 50 stands que ofrec√≠an una aut√©ntica y diversa muestra de la comida peruana. Cada bocado era una deliciosa aventura que celebraba la riqueza gastron√≥mica del pa√≠s. Altamente recomendado para los amantes de la buena comida y la cultura culinaria.',
 	@Codigo_compras_usuarios = '6',
 	@Codigo_compras_entradas = '8'
 GO
@@ -642,7 +637,7 @@ GO
 --4
 EXEC USPRegistroResenias
 	@Calificacion = '4',
-	@Comentario = 'El "Taller de Cer·mica Moche" fue una experiencia ˙nica para sumergirse en las tÈcnicas ancestrales. Aunque desearÌa m·s tiempo pr·ctico, la conexiÛn con la historia del paÌs fue fascinante. Recomendado para quienes buscan una experiencia educativa y pr·ctica.',
+	@Comentario = 'El "Taller de Cer√°mica Moche" fue una experiencia √∫nica para sumergirse en las t√©cnicas ancestrales. Aunque desear√≠a m√°s tiempo pr√°ctico, la conexi√≥n con la historia del pa√≠s fue fascinante. Recomendado para quienes buscan una experiencia educativa y pr√°ctica.',
 	@Codigo_compras_usuarios = '7',
 	@Codigo_compras_entradas = '4'
 GO
@@ -650,7 +645,7 @@ GO
 --5
 EXEC USPRegistroResenias
 	@Calificacion = '4',
-	@Comentario = 'La "NarraciÛn de Libros Peruanos" fue una experiencia encantadora, sumergiÈndonos en la literatura de Clorinda Matto de Turner, Julio RamÛn Ribeyro y otros destacados autores peruanos. Las explicaciones breves aÒadieron profundidad, aunque desearÌa m·s tiempo para discutir cada obra. En general, un evento enriquecedor que celebra la riqueza literaria del paÌs y perfecto para los amantes de la lectura y la cultura.',
+	@Comentario = 'La "Narraci√≥n de Libros Peruanos" fue una experiencia encantadora, sumergi√©ndonos en la literatura de Clorinda Matto de Turner, Julio Ram√≥n Ribeyro y otros destacados autores peruanos. Las explicaciones breves a√±adieron profundidad, aunque desear√≠a m√°s tiempo para discutir cada obra. En general, un evento enriquecedor que celebra la riqueza literaria del pa√≠s y perfecto para los amantes de la lectura y la cultura.',
 	@Codigo_compras_usuarios = '8',
 	@Codigo_compras_entradas = '9'
 GO
@@ -658,7 +653,7 @@ GO
 --6
 EXEC USPRegistroResenias
 	@Calificacion = '5',
-	@Comentario = 'La "ExhibiciÛn: OrquÌdeas Peruanas" fue simplemente espectacular. La diversidad de colores y vida en las orquÌdeas nativas fue impresionante. Los expertos guiaron de manera detallada, explicando el significado de cada color y proporcionando valiosa informaciÛn sobre el tiempo de floraciÛn y cuidados. Un evento imperdible para amantes de la naturaleza y la belleza floral.',
+	@Comentario = 'La "Exhibici√≥n: Orqu√≠deas Peruanas" fue simplemente espectacular. La diversidad de colores y vida en las orqu√≠deas nativas fue impresionante. Los expertos guiaron de manera detallada, explicando el significado de cada color y proporcionando valiosa informaci√≥n sobre el tiempo de floraci√≥n y cuidados. Un evento imperdible para amantes de la naturaleza y la belleza floral.',
 	@Codigo_compras_usuarios = '9',
 	@Codigo_compras_entradas = '6'
 GO
@@ -666,7 +661,7 @@ GO
 --7
 EXEC USPRegistroResenias
 	@Calificacion = '3',
-	@Comentario = 'La "ExhibiciÛn: Tardes de Leyendas Peruanas" ofreciÛ un vistazo intrigante al mundo de las leyendas del paÌs. Aunque la exploraciÛn de historias como la del Ayaymama y los Hermanos Ayar fue interesante, la presentaciÛn podrÌa mejorar para hacerlas m·s envolventes. Sin embargo, fue una oportunidad ˙nica para aprender sobre las influencias histÛricas de estas leyendas en la cultura peruana.',
+	@Comentario = 'La "Exhibici√≥n: Tardes de Leyendas Peruanas" ofreci√≥ un vistazo intrigante al mundo de las leyendas del pa√≠s. Aunque la exploraci√≥n de historias como la del Ayaymama y los Hermanos Ayar fue interesante, la presentaci√≥n podr√≠a mejorar para hacerlas m√°s envolventes. Sin embargo, fue una oportunidad √∫nica para aprender sobre las influencias hist√≥ricas de estas leyendas en la cultura peruana.',
 	@Codigo_compras_usuarios = '10',
 	@Codigo_compras_entradas = '5'
 GO
@@ -674,7 +669,7 @@ GO
 --8
 EXEC USPRegistroResenias
 	@Calificacion = '3',
-	@Comentario = '"ExhibiciÛn: Viva Folclore" fue un concierto interesante con representantes del folclore peruano. Aunque los artistas ofrecieron una experiencia autÈntica, la calidad del sonido y la organizaciÛn del evento podrÌan mejorarse. Sin embargo, la variedad de instrumentos y letras resaltÛ la riqueza cultural, haciendo que la experiencia fuera enriquecedora para quienes buscan sumergirse en la m˙sica folclÛrica peruana.',
+	@Comentario = '"Exhibici√≥n: Viva Folclore" fue un concierto interesante con representantes del folclore peruano. Aunque los artistas ofrecieron una experiencia aut√©ntica, la calidad del sonido y la organizaci√≥n del evento podr√≠an mejorarse. Sin embargo, la variedad de instrumentos y letras resalt√≥ la riqueza cultural, haciendo que la experiencia fuera enriquecedora para quienes buscan sumergirse en la m√∫sica folcl√≥rica peruana.',
 	@Codigo_compras_usuarios = '1',
 	@Codigo_compras_entradas = '10'
 GO
@@ -682,7 +677,7 @@ GO
 --9
 EXEC USPRegistroResenias
 	@Calificacion = '4',
-	@Comentario = '"ExhibiciÛn: Noche Criolla" fue una experiencia encantadora, llena de m˙sica, comida y bailes criollos peruanos. Ideal para disfrutar en familia, la conmemoraciÛn histÛrica agregÛ un toque especial. Aunque algunos aspectos organizativos podrÌan mejorarse, la atmÛsfera festiva y la celebraciÛn de la cultura criolla crearon una noche memorable para todos.',
+	@Comentario = '"Exhibici√≥n: Noche Criolla" fue una experiencia encantadora, llena de m√∫sica, comida y bailes criollos peruanos. Ideal para disfrutar en familia, la conmemoraci√≥n hist√≥rica agreg√≥ un toque especial. Aunque algunos aspectos organizativos podr√≠an mejorarse, la atm√≥sfera festiva y la celebraci√≥n de la cultura criolla crearon una noche memorable para todos.',
 	@Codigo_compras_usuarios = '2',
 	@Codigo_compras_entradas = '7'
 GO
@@ -690,7 +685,7 @@ GO
 --10
 EXEC USPRegistroResenias
 	@Calificacion = '3',
-	@Comentario = 'La "ExhibiciÛn: Cantos Angelicales" proporcionÛ un viaje aceptable a travÈs de melodÌas divinas y voces celestiales. Aunque la experiencia fue en su mayorÌa agradable, algunos aspectos en la coordinaciÛn y la diversidad de repertorio podrÌan mejorarse para ofrecer una experiencia m·s completa. A˙n asÌ, es una opciÛn interesante para quienes buscan sumergirse en un mundo celestial de armonÌa.',
+	@Comentario = 'La "Exhibici√≥n: Cantos Angelicales" proporcion√≥ un viaje aceptable a trav√©s de melod√≠as divinas y voces celestiales. Aunque la experiencia fue en su mayor√≠a agradable, algunos aspectos en la coordinaci√≥n y la diversidad de repertorio podr√≠an mejorarse para ofrecer una experiencia m√°s completa. A√∫n as√≠, es una opci√≥n interesante para quienes buscan sumergirse en un mundo celestial de armon√≠a.',
 	@Codigo_compras_usuarios = '3',
 	@Codigo_compras_entradas = '2'
 GO
@@ -698,25 +693,25 @@ GO
 --CREACION DE TIPOS_SUSCRIPCIONES
 --1
 EXEC USPRegistroTiposSuscripciones
-	@Descripcion = 'SuscripciÛn gratuita sin beneficios',
+	@Descripcion = 'Suscripci√≥n gratuita sin beneficios',
 	@Descuento = '0.00',
 	@Nombre = 'Clasica'
 GO
 --2
 EXEC USPRegistroTiposSuscripciones
-	@Descripcion = 'SuscripciÛn premium de rango bajo que permite acceder a los eventos con anticipaciÛn',
+	@Descripcion = 'Suscripci√≥n premium de rango bajo que permite acceder a los eventos con anticipaci√≥n',
 	@Descuento = '0.10',
 	@Nombre = 'Plata'
 GO
 --3
 EXEC USPRegistroTiposSuscripciones
-	@Descripcion = 'SuscripciÛn premium de rango medio que permite acceder a los eventos con anticipaciÛn y desbloquear promociones',
+	@Descripcion = 'Suscripci√≥n premium de rango medio que permite acceder a los eventos con anticipaci√≥n y desbloquear promociones',
 	@Descuento = '0.20',
 	@Nombre = 'Oro'
 GO
 --4
 EXEC USPRegistroTiposSuscripciones
-	@Descripcion = 'SuscripciÛn premium de rango alto que permite acceder a los eventos con anticipaciÛn y desbloquear promociones y tener beneficios VIP',
+	@Descripcion = 'Suscripci√≥n premium de rango alto que permite acceder a los eventos con anticipaci√≥n y desbloquear promociones y tener beneficios VIP',
 	@Descuento = '0.30',
 	@Nombre = 'Black'
 GO
